@@ -9,7 +9,7 @@ import Foundation
 @testable import takeaway
 
 extension MenuItem {
-    static func fixture(name: String = "name", category: String = "category", spicy: Bool = false) -> MenuItem {
-        MenuItem(name: name, category: category, spicy: spicy)
+    static func fixture(name: String = "name", category: String = "category", spicy: Bool = false, price: Double = 1.00) -> MenuItem {
+        MenuItem(name: name, category: category, spicy: spicy, price: price)
     }
 }

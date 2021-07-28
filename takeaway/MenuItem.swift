@@ -11,6 +11,7 @@ struct MenuItem {
     let name: String
     let category: String
     let spicy: Bool
+    let price: Double
 }
 
 extension MenuItem: Identifiable {

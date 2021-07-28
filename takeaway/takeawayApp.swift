@@ -20,15 +20,15 @@ struct takeawayApp: App {
 }
 
 let menu = [
-    MenuItem(name: "Caprese Salad", category: "starters", spicy: false),
-    MenuItem(name: "Arancini Balls", category: "starters", spicy: false),
-    MenuItem(name: "Penne all Arrabbiata", category: "pastas", spicy: false),
-    MenuItem(name: "Spaghetti Carbonara", category: "pastas", spicy: true),
-    MenuItem(name: "Water", category: "drinks", spicy: false),
-    MenuItem(name: "Red Wine", category: "drinks", spicy: false),
-    MenuItem(name: "White Wine", category: "drinks", spicy: false),
-    MenuItem(name: "Tiramisu", category: "dessert", spicy: false),
-    MenuItem(name: "Affogato", category: "dessert", spicy: false)
+    MenuItem(name: "Caprese Salad", category: "starters", spicy: false, price: 8.00),
+    MenuItem(name: "Arancini Balls", category: "starters", spicy: false, price: 12.00),
+    MenuItem(name: "Penne all Arrabbiata", category: "pastas", spicy: true, price: 15.00),
+    MenuItem(name: "Spaghetti Carbonara", category: "pastas", spicy: true, price: 15.00),
+    MenuItem(name: "Water", category: "drinks", spicy: false, price: 1.00),
+    MenuItem(name: "Red Wine", category: "drinks", spicy: false, price: 7.00),
+    MenuItem(name: "White Wine", category: "drinks", spicy: false, price: 7.00),
+    MenuItem(name: "Tiramisu", category: "dessert", spicy: false, price: 10.00),
+    MenuItem(name: "Affogato", category: "dessert", spicy: false, price: 10.00)
 ]
 
 func groupMenuByCategory(_ menu: [MenuItem]) -> [MenuSection] {
