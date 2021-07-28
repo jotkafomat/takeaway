@@ -10,6 +10,7 @@ import Foundation
 struct MenuItem {
     let name: String
     let category: String
+    let spicy: Bool
 }
 
 extension MenuItem: Identifiable {
