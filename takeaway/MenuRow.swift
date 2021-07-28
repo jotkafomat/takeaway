@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MenuRow: View {
+    
     let viewModel: MenuRow.ViewModel
     
     var body: some View {
