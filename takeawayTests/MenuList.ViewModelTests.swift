@@ -8,8 +8,11 @@
 import Foundation
 @testable import takeaway
 import XCTest
+import Combine
 
 class MenuListViewModelTests: XCTestCase {
+    
+    var cancellable = Set<AnyCancellable>()
     
     func testCallsGivenGroupingFunction() {
         //arrange
@@ -39,6 +42,28 @@ class MenuListViewModelTests: XCTestCase {
     }
     
     func testWhenFetchingSucceedsPublishesSectionsBuiltFromReceivedMenuAndGivenGroupingClosure() {
+        //arrange
+        var receivedMenu: [MenuItem]?
+        let expectedSections = [MenuSection.fixture()]
+        let spyClosure: ([MenuItem]) -> [MenuSection] = { menu in
+            receivedMenu = menu
+            return expectedSections
+        }
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
+        //assert
+        let expectation = XCTestExpectation(description: "Publishes section built from received menu and given grouping closure")
         
+        viewModel
+            .$sections
+            .dropFirst()
+            .sink { value in
+                //ensure the grouping closure is called with the received menu
+                XCTAssertEqual(receivedMenu, menu)
+                //ensure the publish value is the result of the grouping closure
+                XCTAssertEqual(value, expectedSections)
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 1)
     }
 }

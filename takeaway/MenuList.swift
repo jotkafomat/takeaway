@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuList: View {
     
-    let viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         List {
