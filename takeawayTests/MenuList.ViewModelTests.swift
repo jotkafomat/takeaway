@@ -19,7 +19,7 @@ class MenuListViewModelTests: XCTestCase {
             called = true
             return inputSection
         }
-        let viewModel = MenuList.ViewModel(menu: [.fixture()], menuGrouping: spyClosure)
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
         
         //action
         let sections = viewModel.sections
@@ -29,5 +29,16 @@ class MenuListViewModelTests: XCTestCase {
         XCTAssertTrue(called)
         // check that returned value was built with the closure
         XCTAssertEqual(sections, inputSection)
+    }
+    
+    func testWhenFetchingStartsPublishesEmptyView() {
+        // arrange
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder())
+        
+        XCTAssertTrue(viewModel.sections.isEmpty)
+    }
+    
+    func testWhenFetchingSucceedsPublishesSectionsBuiltFromReceivedMenuAndGivenGroupingClosure() {
+        
     }
 }
