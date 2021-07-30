@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */; };
 		E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */; };
 		E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */; };
 		E197E03F26B18A480019DBBB /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03E26B18A480019DBBB /* MenuRow.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 		E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuSection + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03E26B18A480019DBBB /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */,
 				E197E04026B18AD20019DBBB /* MenuRowViewModelTest.swift */,
 				E197E04426B1E8680019DBBB /* MenuList.ViewModelTests.swift */,
+				E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				E197E04126B18AD20019DBBB /* MenuRowViewModelTest.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
 				E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */,
+				E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
