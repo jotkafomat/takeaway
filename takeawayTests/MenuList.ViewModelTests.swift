@@ -14,7 +14,7 @@ class MenuListViewModelTests: XCTestCase {
     
     var cancellable = Set<AnyCancellable>()
     
-    func testCallsGivenGroupingFunction() {
+    func testCallsGivenGroupingFunction() throws {
         //arrange
         var called = false
         let inputSection = [MenuSection.fixture()]
@@ -22,23 +22,33 @@ class MenuListViewModelTests: XCTestCase {
             called = true
             return inputSection
         }
-        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder(), menuGrouping: spyClosure)
-        
-        //action
-        let sections = viewModel.sections
-        
-        //assert
-        // check that given closure was called
-        XCTAssertTrue(called)
-        // check that returned value was built with the closure
-        XCTAssertEqual(sections, inputSection)
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingStub(returning: .success([])), menuGrouping: spyClosure)
+        let expectation = XCTestExpectation(description: "Expect given closure to be called")
+       // action
+        viewModel
+            .$sections
+            .dropFirst()
+            .sink { value in
+                // assert
+                guard case .success(let sections) = value else {
+                    return XCTFail("Expected a successful Result, got: \(value)")
+                }
+                // check that given closure was called
+                XCTAssertTrue(called)
+                // check that returned value was built with the closure
+                XCTAssertEqual(sections, inputSection)
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 1)
     }
     
-    func testWhenFetchingStartsPublishesEmptyView() {
+    func testWhenFetchingStartsPublishesEmptyView() throws {
         // arrange
-        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder())
+        let viewModel = MenuList.ViewModel(menuFetching: MenuFetchingStub(returning: .success([MenuItem.fixture()])))
+        let sections = try viewModel.sections.get()
         
-        XCTAssertTrue(viewModel.sections.isEmpty)
+        XCTAssertTrue(sections.isEmpty)
     }
     
     func testWhenFetchingSucceedsPublishesSectionsBuiltFromReceivedMenuAndGivenGroupingClosure() {
@@ -54,15 +64,18 @@ class MenuListViewModelTests: XCTestCase {
         let viewModel = MenuList.ViewModel(menuFetching: menuFetchingStub, menuGrouping: spyClosure)
         //assert
         let expectation = XCTestExpectation(description: "Publishes section built from received menu and given grouping closure")
-        //act
+        //action
         viewModel
             .$sections
             .dropFirst()
             .sink { value in
+                guard case .success(let sections) = value else {
+                    return XCTFail("Expected a successful Result, got: \(value)")
+                }
                 //ensure the grouping closure is called with the received menu
                 XCTAssertEqual(receivedMenu, expectedMenu)
                 //ensure the publish value is the result of the grouping closure
-                XCTAssertEqual(value, expectedSections)
+                XCTAssertEqual(sections, expectedSections)
                 expectation.fulfill()
             }
             .store(in: &cancellable)
