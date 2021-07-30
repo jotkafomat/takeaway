@@ -25,6 +25,7 @@ class MenuItemTests: XCTestCase {
         XCTAssertEqual(item.spicy, true)
         XCTAssertEqual(item.price, 1.00)
     }
+    
     func testDecodeFromJSONData() throws {
         //arrange
         let data = try dataFromJSONFileNamed("menuItem")
@@ -38,4 +39,26 @@ class MenuItemTests: XCTestCase {
         XCTAssertEqual(item.spicy, true)
         XCTAssertEqual(item.price, 1.00)
     }
+    
+    func testDecodeUsingJSONFixture() throws {
+        
+        //arrange
+        let json = MenuItem.jsonFixture(
+            name: "a name",
+            category: "a category",
+            spicy: true,
+            price: 1.00)
+        
+        let data = try XCTUnwrap(json.data(using:.utf8))
+        
+        //action
+        let item = try JSONDecoder().decode(MenuItem.self, from: data)
+        
+        //assert
+        XCTAssertEqual(item.name, "a name")
+        XCTAssertEqual(item.category, "a category")
+        XCTAssertEqual(item.spicy, true)
+        XCTAssertEqual(item.price, 1.00)
+    }
+    
 }
