@@ -13,6 +13,13 @@
 		E18243BE26B42E93006CF70B /* menuItem.json in Resources */ = {isa = PBXBuildFile; fileRef = E18243BD26B42E93006CF70B /* menuItem.json */; };
 		E18243C026B430FB006CF70B /* XCTestCase+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243BF26B430FB006CF70B /* XCTestCase+Json.swift */; };
 		E18243C226B43758006CF70B /* MenuItem+JSONFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243C126B43758006CF70B /* MenuItem+JSONFixture.swift */; };
+		E18243C426B45CE0006CF70B /* MenuResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243C326B45CE0006CF70B /* MenuResponseTests.swift */; };
+		E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243C526B45E92006CF70B /* MenuResponse.swift */; };
+		E18243C826B7F8B4006CF70B /* MenuFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243C726B7F8B4006CF70B /* MenuFetcherTests.swift */; };
+		E18243CA26B7F96D006CF70B /* MenuFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243C926B7F96D006CF70B /* MenuFetcher.swift */; };
+		E18243CC26B805D4006CF70B /* NetworkFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243CB26B805D4006CF70B /* NetworkFetching.swift */; };
+		E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */; };
+		E18243D026B80AF7006CF70B /* NetworkFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */; };
 		E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */; };
 		E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */; };
 		E197E03F26B18A480019DBBB /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03E26B18A480019DBBB /* MenuRow.swift */; };
@@ -57,6 +64,13 @@
 		E18243BD26B42E93006CF70B /* menuItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menuItem.json; sourceTree = "<group>"; };
 		E18243BF26B430FB006CF70B /* XCTestCase+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Json.swift"; sourceTree = "<group>"; };
 		E18243C126B43758006CF70B /* MenuItem+JSONFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem+JSONFixture.swift"; sourceTree = "<group>"; };
+		E18243C326B45CE0006CF70B /* MenuResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResponseTests.swift; sourceTree = "<group>"; };
+		E18243C526B45E92006CF70B /* MenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResponse.swift; sourceTree = "<group>"; };
+		E18243C726B7F8B4006CF70B /* MenuFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetcherTests.swift; sourceTree = "<group>"; };
+		E18243C926B7F96D006CF70B /* MenuFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetcher.swift; sourceTree = "<group>"; };
+		E18243CB26B805D4006CF70B /* NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetching.swift; sourceTree = "<group>"; };
+		E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkFetching.swift"; sourceTree = "<group>"; };
+		E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingStub.swift; sourceTree = "<group>"; };
 		E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuSection + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03E26B18A480019DBBB /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
@@ -143,6 +157,10 @@
 				E197E04626B1EAAC0019DBBB /* MenuList.ViewModel.swift */,
 				E197E04826B2D1320019DBBB /* MenuFetching.swift */,
 				E197E04A26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift */,
+				E18243C526B45E92006CF70B /* MenuResponse.swift */,
+				E18243C926B7F96D006CF70B /* MenuFetcher.swift */,
+				E18243CB26B805D4006CF70B /* NetworkFetching.swift */,
+				E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */,
 			);
 			path = takeaway;
 			sourceTree = "<group>";
@@ -171,6 +189,9 @@
 				E18243BD26B42E93006CF70B /* menuItem.json */,
 				E18243BF26B430FB006CF70B /* XCTestCase+Json.swift */,
 				E18243C126B43758006CF70B /* MenuItem+JSONFixture.swift */,
+				E18243C326B45CE0006CF70B /* MenuResponseTests.swift */,
+				E18243C726B7F8B4006CF70B /* MenuFetcherTests.swift */,
+				E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -319,9 +340,13 @@
 				E197E04926B2D1320019DBBB /* MenuFetching.swift in Sources */,
 				E1D7251926B02D7000911415 /* MenuSection.swift in Sources */,
 				E1D724EC26B0283D00911415 /* takeawayApp.swift in Sources */,
+				E18243CA26B7F96D006CF70B /* MenuFetcher.swift in Sources */,
+				E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */,
+				E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */,
 				E197E04326B18C440019DBBB /* MenuRow.ViewModel.swift in Sources */,
 				E1D7251D26B053F700911415 /* MenuList.swift in Sources */,
 				E197E03F26B18A480019DBBB /* MenuRow.swift in Sources */,
+				E18243CC26B805D4006CF70B /* NetworkFetching.swift in Sources */,
 				E197E04B26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,9 +360,12 @@
 				E197E04526B1E8680019DBBB /* MenuList.ViewModelTests.swift in Sources */,
 				E197E04126B18AD20019DBBB /* MenuRowViewModelTest.swift in Sources */,
 				E18243C226B43758006CF70B /* MenuItem+JSONFixture.swift in Sources */,
+				E18243C426B45CE0006CF70B /* MenuResponseTests.swift in Sources */,
 				E18243C026B430FB006CF70B /* XCTestCase+Json.swift in Sources */,
 				E18243BA26B41E00006CF70B /* TestError.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
+				E18243C826B7F8B4006CF70B /* MenuFetcherTests.swift in Sources */,
+				E18243D026B80AF7006CF70B /* NetworkFetchingStub.swift in Sources */,
 				E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */,
 				E18243BC26B42AA8006CF70B /* MenuItemTests.swift in Sources */,
 				E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */,
