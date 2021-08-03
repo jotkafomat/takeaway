@@ -13,12 +13,12 @@ class OrderTests: XCTestCase {
     
     func testTotalOrderCalculateFinalCosts() {
         //arrange
-        let order = Order(items: [MenuItem.fixture(), MenuItem.fixture()])
+        let order = Order(items: [MenuItem.fixture(price: 1.0), MenuItem.fixture(price: 2.00)])
         
         //act
         let total = order.total
         
         //assert
-        XCTAssertEqual(total, 2)
+        XCTAssertEqual(total, 3)
     }
 }

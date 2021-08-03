@@ -22,6 +22,8 @@
 		E18243D026B80AF7006CF70B /* NetworkFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */; };
 		E18243DB26B95294006CF70B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243DA26B95294006CF70B /* Order.swift */; };
 		E18243DD26B9537B006CF70B /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243DC26B9537B006CF70B /* OrderTests.swift */; };
+		E18243DF26B95511006CF70B /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243DE26B95511006CF70B /* OrderController.swift */; };
+		E18243E126B95652006CF70B /* OrderControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243E026B95652006CF70B /* OrderControllerTests.swift */; };
 		E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */; };
 		E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */; };
 		E197E03F26B18A480019DBBB /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E03E26B18A480019DBBB /* MenuRow.swift */; };
@@ -75,6 +77,8 @@
 		E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingStub.swift; sourceTree = "<group>"; };
 		E18243DA26B95294006CF70B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		E18243DC26B9537B006CF70B /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		E18243DE26B95511006CF70B /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		E18243E026B95652006CF70B /* OrderControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderControllerTests.swift; sourceTree = "<group>"; };
 		E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuSection + Fixture.swift"; sourceTree = "<group>"; };
 		E197E03E26B18A480019DBBB /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				E18243CB26B805D4006CF70B /* NetworkFetching.swift */,
 				E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */,
 				E18243DA26B95294006CF70B /* Order.swift */,
+				E18243DE26B95511006CF70B /* OrderController.swift */,
 			);
 			path = takeaway;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				E18243C726B7F8B4006CF70B /* MenuFetcherTests.swift */,
 				E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */,
 				E18243DC26B9537B006CF70B /* OrderTests.swift */,
+				E18243E026B95652006CF70B /* OrderControllerTests.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				E1D7251926B02D7000911415 /* MenuSection.swift in Sources */,
 				E1D724EC26B0283D00911415 /* takeawayApp.swift in Sources */,
 				E18243CA26B7F96D006CF70B /* MenuFetcher.swift in Sources */,
+				E18243DF26B95511006CF70B /* OrderController.swift in Sources */,
 				E18243DB26B95294006CF70B /* Order.swift in Sources */,
 				E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */,
 				E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */,
@@ -370,6 +377,7 @@
 				E18243C226B43758006CF70B /* MenuItem+JSONFixture.swift in Sources */,
 				E18243C426B45CE0006CF70B /* MenuResponseTests.swift in Sources */,
 				E18243C026B430FB006CF70B /* XCTestCase+Json.swift in Sources */,
+				E18243E126B95652006CF70B /* OrderControllerTests.swift in Sources */,
 				E18243BA26B41E00006CF70B /* TestError.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
 				E18243C826B7F8B4006CF70B /* MenuFetcherTests.swift in Sources */,
