@@ -20,7 +20,7 @@ class MenuFetchingStub: MenuFetching {
     
     func fetchMenu() -> AnyPublisher<[MenuItem], Error> {
         return result.publisher
-        //use delay to simulate the real word async behevior
+        //use delay to simulate the real word async behaviour
             .delay(for: 0.1, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }
