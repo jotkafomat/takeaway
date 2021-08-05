@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E158765F26BBF12F00DC1DED /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */; };
+		E158766126BBF18000DC1DED /* MenuItemDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */; };
 		E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */; };
 		E18243BA26B41E00006CF70B /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B926B41E00006CF70B /* TestError.swift */; };
 		E18243BC26B42AA8006CF70B /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243BB26B42AA8006CF70B /* MenuItemTests.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
+		E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.ViewModel.swift; sourceTree = "<group>"; };
 		E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 		E18243B926B41E00006CF70B /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		E18243BB26B42AA8006CF70B /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */,
 				E18243DA26B95294006CF70B /* Order.swift */,
 				E18243DE26B95511006CF70B /* OrderController.swift */,
+				E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */,
+				E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */,
 			);
 			path = takeaway;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 				E1D7251926B02D7000911415 /* MenuSection.swift in Sources */,
 				E1D724EC26B0283D00911415 /* takeawayApp.swift in Sources */,
 				E18243CA26B7F96D006CF70B /* MenuFetcher.swift in Sources */,
+				E158765F26BBF12F00DC1DED /* MenuItemDetail.swift in Sources */,
 				E18243DF26B95511006CF70B /* OrderController.swift in Sources */,
+				E158766126BBF18000DC1DED /* MenuItemDetail.ViewModel.swift in Sources */,
 				E18243DB26B95294006CF70B /* Order.swift in Sources */,
 				E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */,
 				E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */,
