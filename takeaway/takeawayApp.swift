@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct takeawayApp: App {
+    
+    let orderController = OrderController()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 MenuList(viewModel: MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder()))
                     .navigationTitle("TakeAway")
             }
+            .environmentObject(orderController)
         }
     }
 }

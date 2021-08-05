@@ -22,7 +22,7 @@ extension MenuItemDetail {
         let spicy: String?
         let price: String
 
-        init(item: MenuItem, orderController: OrderController = OrderController()) {
+        init(item: MenuItem, orderController: OrderController) {
             self.item = item
             self.orderController = orderController
 
