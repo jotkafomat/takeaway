@@ -13,6 +13,7 @@
 		E158766526BBF39800DC1DED /* OrderButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766426BBF39800DC1DED /* OrderButton.ViewModel.swift */; };
 		E158766726BBF3CB00DC1DED /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766626BBF3CB00DC1DED /* OrderDetail.swift */; };
 		E158766926BBF3F400DC1DED /* OrderDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */; };
+		E158766B26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */; };
 		E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */; };
 		E18243BA26B41E00006CF70B /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B926B41E00006CF70B /* TestError.swift */; };
 		E18243BC26B42AA8006CF70B /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243BB26B42AA8006CF70B /* MenuItemTests.swift */; };
@@ -74,6 +75,7 @@
 		E158766426BBF39800DC1DED /* OrderButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.ViewModel.swift; sourceTree = "<group>"; };
 		E158766626BBF3CB00DC1DED /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.ViewModel.swift; sourceTree = "<group>"; };
+		E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.ViewModelTests.swift; sourceTree = "<group>"; };
 		E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 		E18243B926B41E00006CF70B /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		E18243BB26B42AA8006CF70B /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */,
 				E18243DC26B9537B006CF70B /* OrderTests.swift */,
 				E18243E026B95652006CF70B /* OrderControllerTests.swift */,
+				E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				E18243C226B43758006CF70B /* MenuItem+JSONFixture.swift in Sources */,
 				E18243C426B45CE0006CF70B /* MenuResponseTests.swift in Sources */,
 				E18243C026B430FB006CF70B /* XCTestCase+Json.swift in Sources */,
+				E158766B26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift in Sources */,
 				E18243E126B95652006CF70B /* OrderControllerTests.swift in Sources */,
 				E18243BA26B41E00006CF70B /* TestError.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
