@@ -15,7 +15,7 @@ struct takeawayApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                MenuList(viewModel: MenuList.ViewModel(menuFetching: MenuFetchingPlaceholder()))
+                MenuList(viewModel: MenuList.ViewModel(menuFetching: MenuFetcher()))
                     .navigationTitle("TakeAway")
             }
             .environmentObject(orderController)

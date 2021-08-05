@@ -21,6 +21,7 @@ extension MenuList {
             menuFetching
                 .fetchMenu()
                 .map(menuGrouping)
+                .receive(on: RunLoop.main)
                 .sink(
                     receiveCompletion: { [weak self] completion in
                         guard case .failure(let error) = completion else { return }
