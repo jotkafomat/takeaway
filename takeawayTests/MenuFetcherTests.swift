@@ -27,7 +27,7 @@ class MenuFetcherTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Publishes decoded[MenuItem]")
         // act
-        menuFetcher.fetchMenu()
+        menuFetcher.fetchMenu().delay(for: 0.01, scheduler: RunLoop.current)
             .sink(
                 receiveCompletion: {_ in },
                 receiveValue: { items in

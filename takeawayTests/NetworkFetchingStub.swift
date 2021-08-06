@@ -19,6 +19,7 @@ class NetworkFetchingStub: NetworkFetching {
     
     func load(_ request: URLRequest) -> AnyPublisher<Data, URLError> {
         return result.publisher
+            .print()
         //use a delay to simulate the real world async behavior
             .delay(for: 0.01, scheduler: RunLoop.main)
             .eraseToAnyPublisher()
