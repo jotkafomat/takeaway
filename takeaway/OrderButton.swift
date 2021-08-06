@@ -10,9 +10,11 @@ import SwiftUI
 
 struct OrderButton: View {
 
-    let viewModel: ViewModel
-
+    @ObservedObject private(set) var viewModel: ViewModel
+    
     @State private(set) var showingDetail: Bool = false
+    @EnvironmentObject var orderController: OrderController
+
 
     var body: some View {
         Button {
@@ -26,7 +28,7 @@ struct OrderButton: View {
                 .cornerRadius(10.0)
         }
         .sheet(isPresented: $showingDetail) {
-            OrderDetail(viewModel: .init())
+            OrderDetail(viewModel: .init(orderController: orderController))
         }
     }
 }

@@ -14,9 +14,13 @@ struct takeawayApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MenuList(viewModel: MenuList.ViewModel(menuFetching: MenuFetcher()))
-                    .navigationTitle("TakeAway")
+            ZStack(alignment: .bottom) {
+                NavigationView {
+                    MenuList(viewModel: MenuList.ViewModel(menuFetching: MenuFetcher()))
+                        .navigationTitle("TakeAway")
+                }
+                OrderButton(viewModel: .init(orderController: orderController))
+                    .padding(6)
             }
             .environmentObject(orderController)
         }
