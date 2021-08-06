@@ -13,6 +13,21 @@ struct OrderDetail: View {
     let viewModel: ViewModel
 
     var body: some View {
-        Text(viewModel.text)
+        VStack(alignment: .center, spacing: 8) {
+            Text(viewModel.headerText)
+
+            if viewModel.menuListItems.isEmpty {
+                Text(viewModel.emptyMenuFallbackText).multilineTextAlignment(.center)
+            } else {
+                List(viewModel.menuListItems) { Text($0.name) }
+            }
+
+            if let total = viewModel.totalText {
+                Text(total)
+            }
+
+            Spacer()
+        }
+        .padding(8)
     }
 }
