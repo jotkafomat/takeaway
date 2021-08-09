@@ -17,5 +17,7 @@ extension Alert {
         var id: String {
             title + message + buttonText
         }
+        
+        let buttonAction: (() -> Void)? 
     }
 }

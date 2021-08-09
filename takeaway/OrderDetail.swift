@@ -46,7 +46,8 @@ struct OrderDetail: View {
                 title: Text(alertViewModel.title),
                 message: Text(alertViewModel.message),
                 dismissButton: .default(
-                    Text(alertViewModel.buttonText)
+                    Text(alertViewModel.buttonText),
+                    action: alertViewModel.buttonAction
                 )
             )
         }

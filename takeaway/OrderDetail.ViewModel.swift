@@ -20,6 +20,7 @@ extension OrderDetail {
         let emptyMenuFallbackText = "Add dishes to the order to see them here"
         let totalText: String?
         let checkoutButtonText = "Checkout"
+        let onAlertDismiss: () -> Void
 
         private let orderController: OrderController
         private let paymentProcessor: PaymentProcessing
@@ -28,9 +29,12 @@ extension OrderDetail {
         private(set) var cancellables = Set<AnyCancellable>()
 
         init(orderController: OrderController,
-             paymentProcessor: PaymentProcessing = HippoPaymentsProcessor.init(apiKey: "A1B2C3")) {
+             paymentProcessor: PaymentProcessing = HippoPaymentsProcessor.init(apiKey: "A1B2C3"),
+             onAlertDismiss: @escaping () -> Void
+             ) {
             self.paymentProcessor = paymentProcessor
             self.orderController = orderController
+            self.onAlertDismiss = onAlertDismiss
             
             totalText = orderController.order.items.isEmpty
                 ? .none
@@ -45,13 +49,17 @@ extension OrderDetail {
                     receiveCompletion: { [weak self] completion in
                         guard case .failure = completion else { return }
                         self?.alertToShow = Alert.ViewModel(
-                            title: "", message: "There's been an error with your order. Please contact a waiter.", buttonText: "Ok")
+                            title: "",
+                            message: "There's been an error with your order. Please contact a waiter.",
+                            buttonText: "Ok",
+                            buttonAction: self?.onAlertDismiss)
                     },
                     receiveValue: { [weak self] _ in
                         self?.alertToShow = Alert.ViewModel(
                             title: "",
                             message: "The payment was successful. Your food will be with you shortly.",
-                            buttonText: "Ok")
+                            buttonText: "Ok",
+                            buttonAction: self?.onAlertDismiss)
                     }
                 )
                 .store(in: &cancellables)

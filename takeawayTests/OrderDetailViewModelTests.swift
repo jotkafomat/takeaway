@@ -12,7 +12,7 @@ import XCTest
 class OrderDetailViewModelTests: XCTestCase {
     
     func testWhenOrderIsEmptyShouldNotShowTotalAmount() {
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), onAlertDismiss: {})
         
         XCTAssertNil(viewModel.totalText)
     }
@@ -21,13 +21,13 @@ class OrderDetailViewModelTests: XCTestCase {
         let orderController = OrderController()
         orderController.addToOrder(item: .fixture(price: 1.0))
         orderController.addToOrder(item: .fixture(price: 2.3))
-        let viewModel = OrderDetail.ViewModel(orderController: orderController)
+        let viewModel = OrderDetail.ViewModel(orderController: orderController, onAlertDismiss: {})
         
         XCTAssertEqual(viewModel.totalText, "Total: $3.30")
     }
     
     func testWhenOrderIsEmptyHasNotItemNamesToShow() {
-        let viewModel = OrderDetail.ViewModel(orderController: OrderController())
+        let viewModel = OrderDetail.ViewModel(orderController: OrderController(), onAlertDismiss: {})
         
         XCTAssertEqual(viewModel.menuListItems.count, 0)
     }
@@ -36,7 +36,7 @@ class OrderDetailViewModelTests: XCTestCase {
         let orderController = OrderController()
         orderController.addToOrder(item: .fixture(name: "a name"))
         orderController.addToOrder(item: .fixture(name: "another name"))
-        let viewModel = OrderDetail.ViewModel(orderController: orderController)
+        let viewModel = OrderDetail.ViewModel(orderController: orderController, onAlertDismiss: {})
         
         XCTAssertEqual(viewModel.menuListItems.count, 2)
         XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")
@@ -54,7 +54,7 @@ class OrderDetailViewModelTests: XCTestCase {
         
         let viewModel = OrderDetail.ViewModel(
             orderController: orderController,
-            paymentProcessor: paymentProcessingSpy)
+            paymentProcessor: paymentProcessingSpy, onAlertDismiss: {})
         
         viewModel.checkout()
         
@@ -65,7 +65,7 @@ class OrderDetailViewModelTests: XCTestCase {
     func testWhenPaymentSucceedsUpdatesPropertyToShowConfirmationAlert() {
         let viewModel = OrderDetail.ViewModel(
             orderController: OrderController(),
-            paymentProcessor: PaymentProcessingStub(returning: .success(()))
+            paymentProcessor: PaymentProcessingStub(returning: .success(())), onAlertDismiss: {}
         )
         let predicate = NSPredicate {_, _ in
             viewModel.alertToShow != nil
@@ -85,7 +85,7 @@ class OrderDetailViewModelTests: XCTestCase {
         //arrange
         let viewModel = OrderDetail.ViewModel(
             orderController: OrderController(),
-            paymentProcessor: PaymentProcessingStub(returning: .failure(TestError(id: 123))))
+            paymentProcessor: PaymentProcessingStub(returning: .failure(TestError(id: 123))), onAlertDismiss: {})
         
         let predicate = NSPredicate {_, _ in
             viewModel.alertToShow != nil
@@ -100,5 +100,29 @@ class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.alertToShow?.message, "There's been an error with your order. Please contact a waiter.")
         
         XCTAssertEqual(viewModel.alertToShow?.buttonText, "Ok")
+    }
+    
+    func testWhenPaymentSucceedsDismissingTheAlertRunsGivenClosure() {
+        //arrange
+        var called = false
+        let viewModel = OrderDetail.ViewModel(
+            orderController: OrderController(),
+            paymentProcessor: PaymentProcessingStub(returning: .success(())),
+            onAlertDismiss: { called = true }
+        )
+        
+        let predicate = NSPredicate {_, _ in
+            viewModel.alertToShow != nil
+        }
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: .none)
+        
+        //act
+        viewModel.checkout()
+        
+        wait(for: [expectation], timeout: 2)
+        
+        viewModel.alertToShow?.buttonAction?()
+        
+        XCTAssertTrue(called)
     }
 }
