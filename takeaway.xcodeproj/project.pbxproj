@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11F019126C12CB30053A777 /* PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019026C12CB30053A777 /* PaymentProcessing.swift */; };
+		E11F019526C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
+		E11F019726C12E720053A777 /* Order+HippoPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019626C12E720053A777 /* Order+HippoPayments.swift */; };
 		E158765F26BBF12F00DC1DED /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */; };
 		E158766126BBF18000DC1DED /* MenuItemDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */; };
 		E158766326BBF35300DC1DED /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766226BBF35300DC1DED /* OrderButton.swift */; };
@@ -14,6 +17,19 @@
 		E158766726BBF3CB00DC1DED /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766626BBF3CB00DC1DED /* OrderDetail.swift */; };
 		E158766926BBF3F400DC1DED /* OrderDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */; };
 		E158766B26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */; };
+		E158766F26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766E26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift */; };
+		E158767126BD414500DC1DED /* OrderDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158767026BD414500DC1DED /* OrderDetailViewModelTests.swift */; };
+		E158767B26BDAB5E00DC1DED /* HippoAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = E158767926BDAB5E00DC1DED /* HippoAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E158767E26BDAB5E00DC1DED /* HippoAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E158767726BDAB5E00DC1DED /* HippoAnalytics.framework */; };
+		E158767F26BDAB5F00DC1DED /* HippoAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E158767726BDAB5E00DC1DED /* HippoAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E158768526BDAB7600DC1DED /* HippoAnalyticsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158768426BDAB7600DC1DED /* HippoAnalyticsClient.swift */; };
+		E158768F26BDABBC00DC1DED /* HippoPayments.h in Headers */ = {isa = PBXBuildFile; fileRef = E158768D26BDABBC00DC1DED /* HippoPayments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E158769226BDABBC00DC1DED /* HippoPayments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E158768B26BDABBC00DC1DED /* HippoPayments.framework */; };
+		E158769326BDABBC00DC1DED /* HippoPayments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E158768B26BDABBC00DC1DED /* HippoPayments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E158769B26BDABDD00DC1DED /* UIViewController+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158769726BDABDD00DC1DED /* UIViewController+Presentation.swift */; };
+		E158769C26BDABDD00DC1DED /* HippoPaymentsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158769826BDABDD00DC1DED /* HippoPaymentsProcessor.swift */; };
+		E158769D26BDABDD00DC1DED /* HippoPaymentsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158769926BDABDD00DC1DED /* HippoPaymentsError.swift */; };
+		E158769E26BDABDD00DC1DED /* HippoPaymentsConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158769A26BDABDD00DC1DED /* HippoPaymentsConfirmationViewController.swift */; };
 		E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */; };
 		E18243BA26B41E00006CF70B /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243B926B41E00006CF70B /* TestError.swift */; };
 		E18243BC26B42AA8006CF70B /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18243BB26B42AA8006CF70B /* MenuItemTests.swift */; };
@@ -52,6 +68,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E158767C26BDAB5E00DC1DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D724E026B0283D00911415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E158767626BDAB5E00DC1DED;
+			remoteInfo = HippoAnalytics;
+		};
+		E158769026BDABBC00DC1DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D724E026B0283D00911415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E158768A26BDABBC00DC1DED;
+			remoteInfo = HippoPayments;
+		};
 		E1D724FA26B0284300911415 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1D724E026B0283D00911415 /* Project object */;
@@ -68,7 +98,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E158768326BDAB5F00DC1DED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E158769326BDABBC00DC1DED /* HippoPayments.framework in Embed Frameworks */,
+				E158767F26BDAB5F00DC1DED /* HippoAnalytics.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E11F019026C12CB30053A777 /* PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessing.swift; sourceTree = "<group>"; };
+		E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
+		E11F019626C12E720053A777 /* Order+HippoPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+HippoPayments.swift"; sourceTree = "<group>"; };
 		E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
 		E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.ViewModel.swift; sourceTree = "<group>"; };
 		E158766226BBF35300DC1DED /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
@@ -76,6 +124,19 @@
 		E158766626BBF3CB00DC1DED /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.ViewModel.swift; sourceTree = "<group>"; };
 		E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.ViewModelTests.swift; sourceTree = "<group>"; };
+		E158766E26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonViewModelTests.swift; sourceTree = "<group>"; };
+		E158767026BD414500DC1DED /* OrderDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModelTests.swift; sourceTree = "<group>"; };
+		E158767726BDAB5E00DC1DED /* HippoAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HippoAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E158767926BDAB5E00DC1DED /* HippoAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HippoAnalytics.h; sourceTree = "<group>"; };
+		E158767A26BDAB5E00DC1DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E158768426BDAB7600DC1DED /* HippoAnalyticsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HippoAnalyticsClient.swift; sourceTree = "<group>"; };
+		E158768B26BDABBC00DC1DED /* HippoPayments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HippoPayments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E158768D26BDABBC00DC1DED /* HippoPayments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HippoPayments.h; sourceTree = "<group>"; };
+		E158768E26BDABBC00DC1DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E158769726BDABDD00DC1DED /* UIViewController+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentation.swift"; sourceTree = "<group>"; };
+		E158769826BDABDD00DC1DED /* HippoPaymentsProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HippoPaymentsProcessor.swift; sourceTree = "<group>"; };
+		E158769926BDABDD00DC1DED /* HippoPaymentsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HippoPaymentsError.swift; sourceTree = "<group>"; };
+		E158769A26BDABDD00DC1DED /* HippoPaymentsConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HippoPaymentsConfirmationViewController.swift; sourceTree = "<group>"; };
 		E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingStub.swift; sourceTree = "<group>"; };
 		E18243B926B41E00006CF70B /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		E18243BB26B42AA8006CF70B /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
@@ -120,10 +181,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E158767426BDAB5E00DC1DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E158768826BDABBC00DC1DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D724E526B0283D00911415 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E158769226BDABBC00DC1DED /* HippoPayments.framework in Frameworks */,
+				E158767E26BDAB5E00DC1DED /* HippoAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,12 +221,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E158767826BDAB5E00DC1DED /* HippoAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				E158767926BDAB5E00DC1DED /* HippoAnalytics.h */,
+				E158768426BDAB7600DC1DED /* HippoAnalyticsClient.swift */,
+				E158767A26BDAB5E00DC1DED /* Info.plist */,
+			);
+			path = HippoAnalytics;
+			sourceTree = "<group>";
+		};
+		E158768C26BDABBC00DC1DED /* HippoPayments */ = {
+			isa = PBXGroup;
+			children = (
+				E158768D26BDABBC00DC1DED /* HippoPayments.h */,
+				E158769A26BDABDD00DC1DED /* HippoPaymentsConfirmationViewController.swift */,
+				E158769926BDABDD00DC1DED /* HippoPaymentsError.swift */,
+				E158769826BDABDD00DC1DED /* HippoPaymentsProcessor.swift */,
+				E158769726BDABDD00DC1DED /* UIViewController+Presentation.swift */,
+				E158768E26BDABBC00DC1DED /* Info.plist */,
+			);
+			path = HippoPayments;
+			sourceTree = "<group>";
+		};
 		E1D724DF26B0283D00911415 = {
 			isa = PBXGroup;
 			children = (
 				E1D724EA26B0283D00911415 /* takeaway */,
 				E1D724FC26B0284300911415 /* takeawayTests */,
 				E1D7250726B0284300911415 /* takeawayUITests */,
+				E158767826BDAB5E00DC1DED /* HippoAnalytics */,
+				E158768C26BDABBC00DC1DED /* HippoPayments */,
 				E1D724E926B0283D00911415 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,6 +262,8 @@
 				E1D724E826B0283D00911415 /* takeaway.app */,
 				E1D724F926B0284300911415 /* takeawayTests.xctest */,
 				E1D7250426B0284300911415 /* takeawayUITests.xctest */,
+				E158767726BDAB5E00DC1DED /* HippoAnalytics.framework */,
+				E158768B26BDABBC00DC1DED /* HippoPayments.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +295,9 @@
 				E158766426BBF39800DC1DED /* OrderButton.ViewModel.swift */,
 				E158766626BBF3CB00DC1DED /* OrderDetail.swift */,
 				E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */,
+				E11F019026C12CB30053A777 /* PaymentProcessing.swift */,
+				E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */,
+				E11F019626C12E720053A777 /* Order+HippoPayments.swift */,
 			);
 			path = takeaway;
 			sourceTree = "<group>";
@@ -225,6 +332,8 @@
 				E18243DC26B9537B006CF70B /* OrderTests.swift */,
 				E18243E026B95652006CF70B /* OrderControllerTests.swift */,
 				E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */,
+				E158766E26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift */,
+				E158767026BD414500DC1DED /* OrderDetailViewModelTests.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -240,7 +349,62 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E158767226BDAB5E00DC1DED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E158767B26BDAB5E00DC1DED /* HippoAnalytics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E158768626BDABBC00DC1DED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E158768F26BDABBC00DC1DED /* HippoPayments.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E158767626BDAB5E00DC1DED /* HippoAnalytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E158768026BDAB5F00DC1DED /* Build configuration list for PBXNativeTarget "HippoAnalytics" */;
+			buildPhases = (
+				E158767226BDAB5E00DC1DED /* Headers */,
+				E158767326BDAB5E00DC1DED /* Sources */,
+				E158767426BDAB5E00DC1DED /* Frameworks */,
+				E158767526BDAB5E00DC1DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HippoAnalytics;
+			productName = HippoAnalytics;
+			productReference = E158767726BDAB5E00DC1DED /* HippoAnalytics.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E158768A26BDABBC00DC1DED /* HippoPayments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E158769426BDABBC00DC1DED /* Build configuration list for PBXNativeTarget "HippoPayments" */;
+			buildPhases = (
+				E158768626BDABBC00DC1DED /* Headers */,
+				E158768726BDABBC00DC1DED /* Sources */,
+				E158768826BDABBC00DC1DED /* Frameworks */,
+				E158768926BDABBC00DC1DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HippoPayments;
+			productName = HippoPayments;
+			productReference = E158768B26BDABBC00DC1DED /* HippoPayments.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		E1D724E726B0283D00911415 /* takeaway */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D7250D26B0284300911415 /* Build configuration list for PBXNativeTarget "takeaway" */;
@@ -248,10 +412,13 @@
 				E1D724E426B0283D00911415 /* Sources */,
 				E1D724E526B0283D00911415 /* Frameworks */,
 				E1D724E626B0283D00911415 /* Resources */,
+				E158768326BDAB5F00DC1DED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E158767D26BDAB5E00DC1DED /* PBXTargetDependency */,
+				E158769126BDABBC00DC1DED /* PBXTargetDependency */,
 			);
 			name = takeaway;
 			productName = takeaway;
@@ -303,6 +470,14 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					E158767626BDAB5E00DC1DED = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+					E158768A26BDABBC00DC1DED = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
 					E1D724E726B0283D00911415 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -332,11 +507,27 @@
 				E1D724E726B0283D00911415 /* takeaway */,
 				E1D724F826B0284300911415 /* takeawayTests */,
 				E1D7250326B0284300911415 /* takeawayUITests */,
+				E158767626BDAB5E00DC1DED /* HippoAnalytics */,
+				E158768A26BDABBC00DC1DED /* HippoPayments */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E158767526BDAB5E00DC1DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E158768926BDABBC00DC1DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D724E626B0283D00911415 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +555,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E158767326BDAB5E00DC1DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E158768526BDAB7600DC1DED /* HippoAnalyticsClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E158768726BDABBC00DC1DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E158769C26BDABDD00DC1DED /* HippoPaymentsProcessor.swift in Sources */,
+				E158769E26BDABDD00DC1DED /* HippoPaymentsConfirmationViewController.swift in Sources */,
+				E158769D26BDABDD00DC1DED /* HippoPaymentsError.swift in Sources */,
+				E158769B26BDABDD00DC1DED /* UIViewController+Presentation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D724E426B0283D00911415 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +582,7 @@
 				E1D7251726B02D5400911415 /* MenuItem.swift in Sources */,
 				E197E04926B2D1320019DBBB /* MenuFetching.swift in Sources */,
 				E1D7251926B02D7000911415 /* MenuSection.swift in Sources */,
+				E11F019726C12E720053A777 /* Order+HippoPayments.swift in Sources */,
 				E158766926BBF3F400DC1DED /* OrderDetail.ViewModel.swift in Sources */,
 				E158766326BBF35300DC1DED /* OrderButton.swift in Sources */,
 				E1D724EC26B0283D00911415 /* takeawayApp.swift in Sources */,
@@ -383,11 +594,13 @@
 				E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */,
 				E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */,
 				E197E04326B18C440019DBBB /* MenuRow.ViewModel.swift in Sources */,
+				E11F019126C12CB30053A777 /* PaymentProcessing.swift in Sources */,
 				E1D7251D26B053F700911415 /* MenuList.swift in Sources */,
 				E158766726BBF3CB00DC1DED /* OrderDetail.swift in Sources */,
 				E158766526BBF39800DC1DED /* OrderButton.ViewModel.swift in Sources */,
 				E197E03F26B18A480019DBBB /* MenuRow.swift in Sources */,
 				E18243CC26B805D4006CF70B /* NetworkFetching.swift in Sources */,
+				E11F019526C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */,
 				E197E04B26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +618,7 @@
 				E18243C426B45CE0006CF70B /* MenuResponseTests.swift in Sources */,
 				E18243C026B430FB006CF70B /* XCTestCase+Json.swift in Sources */,
 				E158766B26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift in Sources */,
+				E158767126BD414500DC1DED /* OrderDetailViewModelTests.swift in Sources */,
 				E18243E126B95652006CF70B /* OrderControllerTests.swift in Sources */,
 				E18243BA26B41E00006CF70B /* TestError.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
@@ -412,6 +626,7 @@
 				E18243D026B80AF7006CF70B /* NetworkFetchingStub.swift in Sources */,
 				E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */,
 				E18243BC26B42AA8006CF70B /* MenuItemTests.swift in Sources */,
+				E158766F26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift in Sources */,
 				E18243B826B3FEE9006CF70B /* MenuFetchingStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +642,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E158767D26BDAB5E00DC1DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E158767626BDAB5E00DC1DED /* HippoAnalytics */;
+			targetProxy = E158767C26BDAB5E00DC1DED /* PBXContainerItemProxy */;
+		};
+		E158769126BDABBC00DC1DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E158768A26BDABBC00DC1DED /* HippoPayments */;
+			targetProxy = E158769026BDABBC00DC1DED /* PBXContainerItemProxy */;
+		};
 		E1D724FB26B0284300911415 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E1D724E726B0283D00911415 /* takeaway */;
@@ -440,6 +665,122 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E158768126BDAB5F00DC1DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6T6SV744W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HippoAnalytics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jotkafomat.HippoAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E158768226BDAB5F00DC1DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6T6SV744W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HippoAnalytics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jotkafomat.HippoAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E158769526BDABBC00DC1DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6T6SV744W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HippoPayments/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jotkafomat.HippoPayments;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E158769626BDABBC00DC1DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6T6SV744W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HippoPayments/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jotkafomat.HippoPayments;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E1D7250B26B0284300911415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,7 +832,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -546,7 +887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -559,6 +900,7 @@
 		E1D7250E26B0284300911415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +923,7 @@
 		E1D7250F26B0284300911415 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -687,6 +1030,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E158768026BDAB5F00DC1DED /* Build configuration list for PBXNativeTarget "HippoAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E158768126BDAB5F00DC1DED /* Debug */,
+				E158768226BDAB5F00DC1DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E158769426BDABBC00DC1DED /* Build configuration list for PBXNativeTarget "HippoPayments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E158769526BDABBC00DC1DED /* Debug */,
+				E158769626BDABBC00DC1DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1D724E326B0283D00911415 /* Build configuration list for PBXProject "takeaway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

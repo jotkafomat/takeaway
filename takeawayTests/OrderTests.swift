@@ -21,4 +21,17 @@ class OrderTests: XCTestCase {
         //assert
         XCTAssertEqual(total, 3)
     }
+    
+    func testHippoPaymentsPayloadHasOrderItemsNames() throws {
+        let order = Order(
+            items: [.fixture(name: "a name"), .fixture(name: "other name")]
+        )
+
+        let payload = order.hippoPaymentsPayload
+
+        let payloadItems = try XCTUnwrap(payload["items"] as? [String])
+        XCTAssertEqual(payloadItems.count, 2)
+        XCTAssertEqual(payloadItems.first, "a name")
+        XCTAssertEqual(payloadItems.last, "other name")
+    }
 }
