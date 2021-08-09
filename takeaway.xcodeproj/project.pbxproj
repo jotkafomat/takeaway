@@ -11,6 +11,8 @@
 		E11F019526C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */; };
 		E11F019726C12E720053A777 /* Order+HippoPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019626C12E720053A777 /* Order+HippoPayments.swift */; };
 		E11F019926C138510053A777 /* PaymentProcessingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019826C138510053A777 /* PaymentProcessingSpy.swift */; };
+		E11F019B26C143E10053A777 /* EventLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019A26C143E10053A777 /* EventLogging.swift */; };
+		E11F019D26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F019C26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift */; };
 		E158765F26BBF12F00DC1DED /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */; };
 		E158766126BBF18000DC1DED /* MenuItemDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */; };
 		E158766326BBF35300DC1DED /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E158766226BBF35300DC1DED /* OrderButton.swift */; };
@@ -119,6 +121,8 @@
 		E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoPaymentsProcessor+PaymentProcessing.swift"; sourceTree = "<group>"; };
 		E11F019626C12E720053A777 /* Order+HippoPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+HippoPayments.swift"; sourceTree = "<group>"; };
 		E11F019826C138510053A777 /* PaymentProcessingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessingSpy.swift; sourceTree = "<group>"; };
+		E11F019A26C143E10053A777 /* EventLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogging.swift; sourceTree = "<group>"; };
+		E11F019C26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HippoAnalyticsClient+EventLogging.swift"; sourceTree = "<group>"; };
 		E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
 		E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.ViewModel.swift; sourceTree = "<group>"; };
 		E158766226BBF35300DC1DED /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 				E11F019026C12CB30053A777 /* PaymentProcessing.swift */,
 				E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */,
 				E11F019626C12E720053A777 /* Order+HippoPayments.swift */,
+				E11F019A26C143E10053A777 /* EventLogging.swift */,
+				E11F019C26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift */,
 			);
 			path = takeaway;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E197E04726B1EAAC0019DBBB /* MenuList.ViewModel.swift in Sources */,
+				E11F019B26C143E10053A777 /* EventLogging.swift in Sources */,
 				E1D7251726B02D5400911415 /* MenuItem.swift in Sources */,
 				E197E04926B2D1320019DBBB /* MenuFetching.swift in Sources */,
 				E1D7251926B02D7000911415 /* MenuSection.swift in Sources */,
@@ -595,6 +602,7 @@
 				E158766126BBF18000DC1DED /* MenuItemDetail.ViewModel.swift in Sources */,
 				E18243DB26B95294006CF70B /* Order.swift in Sources */,
 				E18243CE26B80661006CF70B /* URLSession+NetworkFetching.swift in Sources */,
+				E11F019D26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift in Sources */,
 				E18243C626B45E92006CF70B /* MenuResponse.swift in Sources */,
 				E197E04326B18C440019DBBB /* MenuRow.ViewModel.swift in Sources */,
 				E11F019126C12CB30053A777 /* PaymentProcessing.swift in Sources */,
