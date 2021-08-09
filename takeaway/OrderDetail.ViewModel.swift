@@ -55,11 +55,16 @@ extension OrderDetail {
                             buttonAction: self?.onAlertDismiss)
                     },
                     receiveValue: { [weak self] _ in
-                        self?.alertToShow = Alert.ViewModel(
+                        guard let self = self else { return }
+                        
+                        self.alertToShow = Alert.ViewModel(
                             title: "",
                             message: "The payment was successful. Your food will be with you shortly.",
                             buttonText: "Ok",
-                            buttonAction: self?.onAlertDismiss)
+                            buttonAction: {
+                                self.orderController.resetOrder()
+                                self.onAlertDismiss()
+                            })
                     }
                 )
                 .store(in: &cancellables)

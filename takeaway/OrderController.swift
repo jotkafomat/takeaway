@@ -30,4 +30,8 @@ class OrderController: ObservableObject {
         
         order = Order(items: orderItemsCopy)
     }
+    
+    func resetOrder() {
+        order = Order(items: [])
+    }
 }

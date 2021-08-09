@@ -125,4 +125,29 @@ class OrderDetailViewModelTests: XCTestCase {
         
         XCTAssertTrue(called)
     }
+    
+    func testWhenPaymentSucceedsDismissingTheAlertResetsTheOrder() {
+        //arrange
+        let orderController = OrderController()
+        orderController.addToOrder(item: .fixture())
+        
+        let viewModel = OrderDetail.ViewModel(
+            orderController: orderController,
+            paymentProcessor: PaymentProcessingStub(returning: .success(())),
+            onAlertDismiss: {}
+        )
+        
+        let predicate = NSPredicate {_, _ in
+            viewModel.alertToShow != nil
+        }
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: .none)
+        
+        viewModel.checkout()
+        
+        wait(for: [expectation], timeout: 2)
+        
+        viewModel.alertToShow?.buttonAction?()
+        
+        XCTAssertTrue(orderController.order.items.isEmpty)
+    }
 }
