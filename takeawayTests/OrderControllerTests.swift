@@ -20,8 +20,9 @@ class OrderControllerTests: XCTestCase {
     func testWhenItemIsInOrderReturnTrue() {
         //arrange
         let item = MenuItem(name: "water", category: "drink", spicy: false, price: 1.0)
-        let order = Order(items: [item])
-        let orderController = OrderController(order: order)
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        
+        orderController.addToOrder(item: item)
         
         //act
         let result = orderController.isItemInOrder(item)
@@ -34,8 +35,9 @@ class OrderControllerTests: XCTestCase {
         //arrange
         let item = MenuItem(name: "water", category: "drink", spicy: false, price: 1.0)
         let item2 = MenuItem.fixture()
-        let order = Order(items: [item])
-        let orderController = OrderController(order: order)
+        
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        orderController.addToOrder(item: item)
         
         //act
         let result = orderController.isItemInOrder(item2)
@@ -47,8 +49,7 @@ class OrderControllerTests: XCTestCase {
     func testWhenItemIsAddedToOrderIsInTheOrder() {
         //arrange
         let item = MenuItem.fixture()
-        let order = Order(items: [])
-        let orderController = OrderController(order: order)
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         
         //act
         orderController.addToOrder(item: item)
@@ -62,9 +63,10 @@ class OrderControllerTests: XCTestCase {
         //arrange
         let item = MenuItem.fixture(name: "water")
         let item2 = MenuItem.fixture(name: "coffee")
-        let order = Order(items: [item, item2])
-        let orderController = OrderController(order: order)
         
+        let orderController = OrderController(orderStoring: OrderStoringFake())
+        orderController.addToOrder(item: item)
+        orderController.addToOrder(item: item2)
         //act
         orderController.removeFromOrder(item: item)
         

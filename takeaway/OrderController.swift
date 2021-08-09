@@ -10,8 +10,11 @@ import Foundation
 class OrderController: ObservableObject {
     @Published private(set) var order: Order
     
-    init(order: Order = Order(items: [])) {
-        self.order = order
+    private let orderStoring: OrderStoring
+    
+    init(orderStoring: OrderStoring = UserDefaults.standard) {
+        self.orderStoring = orderStoring
+        order = orderStoring.getOrder()
     }
     
     func isItemInOrder(_ item: MenuItem) -> Bool {
@@ -33,5 +36,10 @@ class OrderController: ObservableObject {
     
     func resetOrder() {
         order = Order(items: [])
+    }
+    
+    func updateOrder(with newOrder: Order) {
+        orderStoring.updateOrder(newOrder)
+        order = newOrder
     }
 }

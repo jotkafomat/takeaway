@@ -46,7 +46,7 @@ class OrderDetailViewModelTests: XCTestCase {
     func testWhenCheckOutButtonTappedStartsPaymentProcessingFlow() {
         //arrange
         
-        let orderController = OrderController()
+        let orderController = OrderController(orderStoring: OrderStoringFake())
         orderController.addToOrder(item: .fixture(name: "a name"))
         orderController.addToOrder(item: .fixture(name: "another name"))
         
