@@ -7,10 +7,13 @@
 
 import Foundation
 import HippoPayments
+import Combine
+import SwiftUI
+
 
 extension OrderDetail {
     
-    struct ViewModel {
+    class ViewModel: ObservableObject {
 
         let headerText = "Your Order"
         let menuListItems: [MenuItem]
@@ -20,6 +23,9 @@ extension OrderDetail {
 
         private let orderController: OrderController
         private let paymentProcessor: PaymentProcessing
+        
+        @Published var alertToShow: Alert.ViewModel?
+        private(set) var cancellables = Set<AnyCancellable>()
 
         init(orderController: OrderController,
              paymentProcessor: PaymentProcessing = HippoPaymentsProcessor.init(apiKey: "A1B2C3")) {
@@ -35,6 +41,20 @@ extension OrderDetail {
         
         func checkout() {
             paymentProcessor.process(order: orderController.order)
+                .sink(
+                    receiveCompletion: { [weak self] completion in
+                        guard case .failure = completion else { return }
+                        self?.alertToShow = Alert.ViewModel(
+                            title: "", message: "There's been an error with your order. Please contact a waiter.", buttonText: "Ok")
+                    },
+                    receiveValue: { [weak self] _ in
+                        self?.alertToShow = Alert.ViewModel(
+                            title: "",
+                            message: "The payment was successful. Your food will be with you shortly.",
+                            buttonText: "Ok")
+                    }
+                )
+                .store(in: &cancellables)
         }
     }
 }
