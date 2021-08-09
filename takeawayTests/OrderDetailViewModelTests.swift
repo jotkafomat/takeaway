@@ -42,5 +42,24 @@ class OrderDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.menuListItems.first?.name, "a name")
         XCTAssertEqual(viewModel.menuListItems.last?.name, "another name")
     }
+    
+    func testWhenCheckOutButtonTappedStartsPaymentProcessingFlow() {
+        //arrange
+        
+        let orderController = OrderController()
+        orderController.addToOrder(item: .fixture(name: "a name"))
+        orderController.addToOrder(item: .fixture(name: "another name"))
+        
+        let paymentProcessingSpy = PaymentProcessingSpy()
+        
+        let viewModel = OrderDetail.ViewModel(
+            orderController: orderController,
+            paymentProcessor: paymentProcessingSpy)
+        
+        viewModel.checkout()
+        
+        XCTAssertEqual(paymentProcessingSpy.receivedOrder, orderController.order)
+        
+    }
 
 }

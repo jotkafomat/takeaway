@@ -16,3 +16,5 @@ struct Order {
             .reduce(0, +)
     }
 }
+
+extension Order: Equatable {}
