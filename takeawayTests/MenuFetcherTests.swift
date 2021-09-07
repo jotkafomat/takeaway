@@ -63,4 +63,19 @@ class MenuFetcherTests: XCTestCase {
             .store(in: &cancellable)
         wait(for: [expectation], timeout: 1)
     }
+    
+    func testUsesGivenBaseURLInRequest() throws {
+        let spy = NetworkFetchingSpy()
+        let menuFetcher = MenuFetcher(networkFetching: spy, baseURL: try XCTUnwrap(URL(string: "https://test.fake")))
+        
+        let expectation = XCTestExpectation(description: "Request succeeds")
+        
+        menuFetcher.fetchMenu()
+            .sink(
+                receiveCompletion: {_ in  expectation.fulfill() },
+                receiveValue: { _ in })
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 1)
+        XCTAssert(spy.request?.url?.absoluteString == "https://test.fake/menu_response.json")
+    }
 }

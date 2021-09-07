@@ -64,6 +64,7 @@
 		E197E04726B1EAAC0019DBBB /* MenuList.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E04626B1EAAC0019DBBB /* MenuList.ViewModel.swift */; };
 		E197E04926B2D1320019DBBB /* MenuFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E04826B2D1320019DBBB /* MenuFetching.swift */; };
 		E197E04B26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197E04A26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift */; };
+		E1AF45EB26E7999B009B4908 /* NetworkFetchingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF45EA26E7999B009B4908 /* NetworkFetchingSpy.swift */; };
 		E1D724EC26B0283D00911415 /* takeawayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D724EB26B0283D00911415 /* takeawayApp.swift */; };
 		E1D724F026B0284300911415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D724EF26B0284300911415 /* Assets.xcassets */; };
 		E1D724F326B0284300911415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D724F226B0284300911415 /* Preview Assets.xcassets */; };
@@ -179,6 +180,7 @@
 		E197E04626B1EAAC0019DBBB /* MenuList.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.ViewModel.swift; sourceTree = "<group>"; };
 		E197E04826B2D1320019DBBB /* MenuFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetching.swift; sourceTree = "<group>"; };
 		E197E04A26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFetchingPlaceholder.swift; sourceTree = "<group>"; };
+		E1AF45EA26E7999B009B4908 /* NetworkFetchingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingSpy.swift; sourceTree = "<group>"; };
 		E1D724E826B0283D00911415 /* takeaway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = takeaway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D724EB26B0283D00911415 /* takeawayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = takeawayApp.swift; sourceTree = "<group>"; };
 		E1D724EF26B0284300911415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,37 +289,37 @@
 		E1D724EA26B0283D00911415 /* takeaway */ = {
 			isa = PBXGroup;
 			children = (
-				E1D724EB26B0283D00911415 /* takeawayApp.swift */,
+				E11F019E26C154D10053A777 /* Alert.ViewModel.swift */,
 				E1D724EF26B0284300911415 /* Assets.xcassets */,
-				E1D724F426B0284300911415 /* Info.plist */,
-				E1D724F126B0284300911415 /* Preview Content */,
-				E1D7251626B02D5400911415 /* MenuItem.swift */,
-				E1D7251826B02D7000911415 /* MenuSection.swift */,
-				E1D7251C26B053F700911415 /* MenuList.swift */,
-				E197E03E26B18A480019DBBB /* MenuRow.swift */,
-				E197E04226B18C440019DBBB /* MenuRow.ViewModel.swift */,
-				E197E04626B1EAAC0019DBBB /* MenuList.ViewModel.swift */,
-				E197E04826B2D1320019DBBB /* MenuFetching.swift */,
-				E197E04A26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift */,
-				E18243C526B45E92006CF70B /* MenuResponse.swift */,
-				E18243C926B7F96D006CF70B /* MenuFetcher.swift */,
-				E18243CB26B805D4006CF70B /* NetworkFetching.swift */,
-				E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */,
-				E18243DA26B95294006CF70B /* Order.swift */,
-				E18243DE26B95511006CF70B /* OrderController.swift */,
-				E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */,
-				E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */,
-				E158766226BBF35300DC1DED /* OrderButton.swift */,
-				E158766426BBF39800DC1DED /* OrderButton.ViewModel.swift */,
-				E158766626BBF3CB00DC1DED /* OrderDetail.swift */,
-				E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */,
-				E11F019026C12CB30053A777 /* PaymentProcessing.swift */,
-				E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */,
-				E11F019626C12E720053A777 /* Order+HippoPayments.swift */,
 				E11F019A26C143E10053A777 /* EventLogging.swift */,
 				E11F019C26C144000053A777 /* HippoAnalyticsClient+EventLogging.swift */,
-				E11F019E26C154D10053A777 /* Alert.ViewModel.swift */,
+				E11F019426C12D330053A777 /* HippoPaymentsProcessor+PaymentProcessing.swift */,
+				E1D724F426B0284300911415 /* Info.plist */,
+				E18243C926B7F96D006CF70B /* MenuFetcher.swift */,
+				E197E04826B2D1320019DBBB /* MenuFetching.swift */,
+				E197E04A26B2D30D0019DBBB /* MenuFetchingPlaceholder.swift */,
+				E1D7251626B02D5400911415 /* MenuItem.swift */,
+				E158765E26BBF12F00DC1DED /* MenuItemDetail.swift */,
+				E158766026BBF18000DC1DED /* MenuItemDetail.ViewModel.swift */,
+				E1D7251C26B053F700911415 /* MenuList.swift */,
+				E197E04626B1EAAC0019DBBB /* MenuList.ViewModel.swift */,
+				E18243C526B45E92006CF70B /* MenuResponse.swift */,
+				E197E03E26B18A480019DBBB /* MenuRow.swift */,
+				E197E04226B18C440019DBBB /* MenuRow.ViewModel.swift */,
+				E1D7251826B02D7000911415 /* MenuSection.swift */,
+				E18243CB26B805D4006CF70B /* NetworkFetching.swift */,
+				E18243DA26B95294006CF70B /* Order.swift */,
+				E11F019626C12E720053A777 /* Order+HippoPayments.swift */,
+				E158766226BBF35300DC1DED /* OrderButton.swift */,
+				E158766426BBF39800DC1DED /* OrderButton.ViewModel.swift */,
+				E18243DE26B95511006CF70B /* OrderController.swift */,
+				E158766626BBF3CB00DC1DED /* OrderDetail.swift */,
+				E158766826BBF3F400DC1DED /* OrderDetail.ViewModel.swift */,
 				E11F01A426C1909C0053A777 /* OrderStoring.swift */,
+				E11F019026C12CB30053A777 /* PaymentProcessing.swift */,
+				E1D724F126B0284300911415 /* Preview Content */,
+				E1D724EB26B0283D00911415 /* takeawayApp.swift */,
+				E18243CD26B80661006CF70B /* URLSession+NetworkFetching.swift */,
 				E11F01A626C1920C0053A777 /* UserDefaults+OrderStoring.swift */,
 			);
 			path = takeaway;
@@ -335,29 +337,30 @@
 			isa = PBXGroup;
 			children = (
 				E1D7251A26B04A7500911415 /* Collection+Safe.swift */,
-				E1D724FD26B0284300911415 /* menuGroupingTests.swift */,
 				E1D724FF26B0284300911415 /* Info.plist */,
-				E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */,
-				E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */,
-				E197E04026B18AD20019DBBB /* MenuRowViewModelTest.swift */,
-				E197E04426B1E8680019DBBB /* MenuList.ViewModelTests.swift */,
-				E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */,
-				E18243B926B41E00006CF70B /* TestError.swift */,
-				E18243BB26B42AA8006CF70B /* MenuItemTests.swift */,
-				E18243BD26B42E93006CF70B /* menuItem.json */,
-				E18243BF26B430FB006CF70B /* XCTestCase+Json.swift */,
-				E18243C126B43758006CF70B /* MenuItem+JSONFixture.swift */,
-				E18243C326B45CE0006CF70B /* MenuResponseTests.swift */,
 				E18243C726B7F8B4006CF70B /* MenuFetcherTests.swift */,
-				E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */,
-				E18243DC26B9537B006CF70B /* OrderTests.swift */,
-				E18243E026B95652006CF70B /* OrderControllerTests.swift */,
+				E18243B726B3FEE9006CF70B /* MenuFetchingStub.swift */,
+				E1D724FD26B0284300911415 /* menuGroupingTests.swift */,
+				E197E03A26B17B5D0019DBBB /* MenuItem + Fixture.swift */,
+				E18243BD26B42E93006CF70B /* menuItem.json */,
+				E18243C126B43758006CF70B /* MenuItem+JSONFixture.swift */,
 				E158766A26BBF8DF00DC1DED /* MenuItemDetail.ViewModelTests.swift */,
+				E18243BB26B42AA8006CF70B /* MenuItemTests.swift */,
+				E197E04426B1E8680019DBBB /* MenuList.ViewModelTests.swift */,
+				E18243C326B45CE0006CF70B /* MenuResponseTests.swift */,
+				E197E04026B18AD20019DBBB /* MenuRowViewModelTest.swift */,
+				E197E03C26B1800D0019DBBB /* MenuSection + Fixture.swift */,
+				E18243CF26B80AF7006CF70B /* NetworkFetchingStub.swift */,
+				E1AF45EA26E7999B009B4908 /* NetworkFetchingSpy.swift */,
 				E158766E26BD3BFA00DC1DED /* OrderButtonViewModelTests.swift */,
+				E18243E026B95652006CF70B /* OrderControllerTests.swift */,
 				E158767026BD414500DC1DED /* OrderDetailViewModelTests.swift */,
+				E11F01A826C197630053A777 /* OrderStoringFake.swift */,
+				E18243DC26B9537B006CF70B /* OrderTests.swift */,
 				E11F019826C138510053A777 /* PaymentProcessingSpy.swift */,
 				E11F01A226C156670053A777 /* PaymentProcessingStub.swift */,
-				E11F01A826C197630053A777 /* OrderStoringFake.swift */,
+				E18243B926B41E00006CF70B /* TestError.swift */,
+				E18243BF26B430FB006CF70B /* XCTestCase+Json.swift */,
 			);
 			path = takeawayTests;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				E18243BA26B41E00006CF70B /* TestError.swift in Sources */,
 				E197E03D26B1800D0019DBBB /* MenuSection + Fixture.swift in Sources */,
 				E18243C826B7F8B4006CF70B /* MenuFetcherTests.swift in Sources */,
+				E1AF45EB26E7999B009B4908 /* NetworkFetchingSpy.swift in Sources */,
 				E18243D026B80AF7006CF70B /* NetworkFetchingStub.swift in Sources */,
 				E197E03B26B17B5D0019DBBB /* MenuItem + Fixture.swift in Sources */,
 				E11F019926C138510053A777 /* PaymentProcessingSpy.swift in Sources */,
